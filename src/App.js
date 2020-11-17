@@ -10,6 +10,10 @@ import {
 import AdvanceGym from './Components/AdvanceGym/AdvanceGym';
 import Home from './Components/Home/Home/Home';
 import Pricing from './Components/Pricing/Pricing';
+import Checkout from './Components/Checkout/Checkout';
+import MembershipForm from './Components/MembershipForm/MembershipForm';
+import Footer from './Components/Shared/Footer/Footer';
+import Service from './Components/Service/Service';
 
 const App = () => {
   return (
@@ -25,8 +29,18 @@ const App = () => {
        <Route path="/class">
             <Classes />
           </Route>
-          <Route path="/advanceGym">
+          <Route path="/checkout">
+          <Checkout></Checkout>
+          </Route>
+             <Route path="/membership-form">
+          <MembershipForm></MembershipForm>
+          </Route>
+          <Route path="/advanceGym/:title">
             <AdvanceGym />
+          </Route>
+          <Route path="/service">
+            <Service />
+            <Footer></Footer>
           </Route>
        <Route exact path="/">
          <Home></Home>

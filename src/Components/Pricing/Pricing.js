@@ -5,6 +5,7 @@ import nutrionBg from '../img-and-icon/nutrition-bg.jpg';
 import progressionBg from '../img-and-icon/progression-bg.jpg';
 import workoutBg from '../img-and-icon/workout-bg.jpg';
 import { Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const pricingCards = [
     {
@@ -76,9 +77,11 @@ const Pricing = () => {
                                                     <p><i class="fa fa-check mr-1" aria-hidden="true"></i> Happy Customers </p>
                                                     </div>
 
-                                                    <button className="btn btn-lg banner-btn m-3">
+                                                   <Link to="/membership-form">
+                                                   <button className="btn btn-lg banner-btn m-3">
                          PURCHASE
                       </button>
+                                                   </Link>
                                                 </div>
                                             </div>
                                         </div>

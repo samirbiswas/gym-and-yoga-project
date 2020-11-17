@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './AdvanceGymClassTime.css';
 
 const AdvanceGymClassTime = () => {
@@ -39,8 +39,15 @@ const AdvanceGymClassTime = () => {
                 </div>
 
             </div>
-            <div className="button-area">
-                <Button variant="warning">JOIN US</Button>
+            <div className="d-block ml-auto">
+                <br/>
+                <br/>
+                <br/>
+               <Link to="/membership-form">
+                   <button className="btn btn-lg banner-btn d-block ml-auto">
+                       Join us
+                   </button>
+               </Link>
             </div>
         </div>
     );

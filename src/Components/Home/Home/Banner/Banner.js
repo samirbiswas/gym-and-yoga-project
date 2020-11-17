@@ -2,6 +2,7 @@ import React from 'react';
 import './Banner.css';
 import { Container, Row } from 'react-bootstrap';
 import NavBar from '../../../Shared/NavBar/NavBar';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -21,9 +22,11 @@ const Banner = () => {
                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa iure magni similique reprehenderit quisquam!
                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est nisi numquam error ipsum blanditiis nulla esse sequi at.
                       </p>
-                      <button className="btn btn-lg banner-btn">
+                    <Link to="/membership-form">
+                    <button className="btn btn-lg banner-btn">
                           Join Us
                       </button>
+                    </Link>
                      </div>
                   </div>
                   <div className="col-12 col-md-6">

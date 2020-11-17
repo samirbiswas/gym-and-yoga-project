@@ -1,28 +1,30 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import AdvanceGymClassTime from '../AdvanceGymClassTime/AdvanceGymClassTime';
 import AdvanceGymDetail from '../AdvanceGymDetail/AdvanceGymDetail';
 import '../Classes/Classes.css';
+import NavBar from '../Shared/NavBar/NavBar';
 import './AdvanceGym.css';
 
 const AdvanceGym = () => {
+    const {title} = useParams();
+ 
     return (
-        <section>
+        <div className="class-container">
             <div className="class-heading text-center">
-                <br/>
-                <br/>
-                <h3>Here will be the navigation bar</h3>
+                <NavBar></NavBar>
                 <br/>
                 <br/>
                 <br/>
                 <br/>
                 <div className="header-tag">
-                    <h1>ADVANCE GYM</h1>
+                    <h1>{title}</h1>
                 </div>
             </div>
 
             <div className="row">
                 <div className="col-md-7">
-                    <AdvanceGymDetail></AdvanceGymDetail>
+                    <AdvanceGymDetail title={title}></AdvanceGymDetail>
                 </div>
                 <div className="col-md-5">
                     <AdvanceGymClassTime></AdvanceGymClassTime>
@@ -31,7 +33,7 @@ const AdvanceGym = () => {
             </div>
 
 
-        </section>
+        </div>
     );
 };
 
